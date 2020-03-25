@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import UpdateBook from "./updateBook";
+
 export default class ViewBook extends Component {
     constructor(props){
         super(props)
@@ -37,6 +39,7 @@ export default class ViewBook extends Component {
                 <div className='book-author'>
                     {this.state.singleBook[2]}
                 </div>
+                <UpdateBook ourProp = {this.state.singleBook}/>
             </div>
         );
     }
