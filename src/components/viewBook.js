@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import UpdateBook from "./updateBook";
+import DeleteAction from "./deleteAction";
 
 export default class ViewBook extends Component {
     constructor(props){
@@ -40,6 +41,7 @@ export default class ViewBook extends Component {
                     {this.state.singleBook[2]}
                 </div>
                 <UpdateBook ourProp = {this.state.singleBook}/>
+                <DeleteAction id= {this.state.singleBook[0]}></DeleteAction>
             </div>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import {Link} from 'react-router-dom';
+import DeleteAction from "./deleteAction";
 
 export default class BookIndex extends Component {
     constructor(props){
@@ -36,6 +37,7 @@ export default class BookIndex extends Component {
                         <h3>Author: {book[2]}</h3>
                         <div className='links'>
                             <Link to={`/view_book/${book[0]}`}>View Book</Link>
+                            <DeleteAction id={book[0]} />
                         </div>
                     </div>
                 ))}
